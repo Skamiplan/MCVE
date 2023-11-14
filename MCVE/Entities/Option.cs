@@ -15,9 +15,5 @@ namespace MCVE.Entities
         public Guid TicketId { get; set; }
 
         public virtual Ticket? Ticket { get; set; }
-
-
-        [MaxLength(255)]
-        public required string OptionId { get; set; }
     }
 }

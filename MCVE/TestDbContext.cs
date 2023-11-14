@@ -33,8 +33,6 @@ namespace MCVE
                 typeBuilder =>
                     {
                         typeBuilder.HasOne(o => o.Ticket).WithMany(organizationGroup => organizationGroup.Options).HasForeignKey(c => c.TicketId);
-
-                        typeBuilder.HasIndex(p => new { p.TicketId, }).IncludeProperties(p => new { p.OptionId });
                     });
 
             // Next comment out the builder logic above and uncomment the logic below and Run
